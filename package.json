@@ -1,0 +1,21 @@
+{
+  "name": "express-api",
+  "description": "a express api generator",
+  "version": "1.0.0",
+  "private": true,
+  "author": "YsnIrix",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.3.0",
+    "express-slow-down": "^1.4.0",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
+    "morgan": "^1.10.0"
+  }
+}

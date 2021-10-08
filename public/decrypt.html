@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <title>YCrypto</title>
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body class="">
+    <div class="page">
+        <div class="page-single">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-login mx-auto">
+                        <div class="text-center mb-6">
+                            <a href="/">
+                                <img src="assets/images/crypto.svg" class="h-7" alt="brand">
+                            </a>
+                        </div>
+                        <form id="decryptApp" @submit.prevent="decryptData()" class="card">
+                            <div class="card-body p-6">
+                                <div v-if="errorVisible" v-if="error" class="alert alert-icon alert-danger"
+                                    role="alert">
+                                    <i class="fa fa-warning pb-1" aria-hidden="true"></i>
+                                    <span>{{error}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="decrypt-textarea-input"
+                                        name="decrypt-textarea-input" rows="3" v-model="encMessage"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Secret Key</label>
+                                    <div class="input-group">
+                                        <input id="secret-input" type="text" class="form-control" name="secret-input"
+                                            placeholder="Secret" v-model="secret">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-purple btn-block">Decrypt</button>
+                                <div class="form-footer">
+                                    <div v-if="loaderVisible">
+                                        <center>
+                                            <div class="text-indigo loader"></div>
+                                        </center>
+                                    </div>
+                                    <div v-if="decryptedVisible" class="form-group">
+                                        <div v-if="decrypted">
+                                            <label class="form-label text-center">Decrypted Message</label>
+                                            <textarea class="form-control text-center" name="decrypted-textarea-input"
+                                                id="decrypted-textarea-input" rows="3">{{decrypted}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="text-center text-muted">
+                            We do not store or send anything on the server, all operations are made on the client side.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="assets/js/app2.js"></script>
+</body>
+
+</html>
