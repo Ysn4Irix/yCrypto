@@ -1,6 +1,6 @@
 {
-  "name": "express-api",
-  "description": "a express api generator",
+  "name": "ycrypto",
+  "description": "A Web Application for Crypting & Decrypting Messages using AES-256-CBC",
   "version": "1.0.0",
   "private": true,
   "author": "YsnIrix",
