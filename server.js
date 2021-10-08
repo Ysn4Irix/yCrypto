@@ -24,9 +24,10 @@ app.use(
     useDefaults: true,
     directives: {
       "script-src": ["'self' unpkg.com", "'unsafe-eval' unpkg.com"],
-      "font-src": ["'self' fonts.googleapis.com fonts.gstatic.com unpkg.com"],
-      "style-src": ["'self' fonts.googleapis.com unpkg.com"],
-      "script-src-attr": ["'self'"],
+      "font-src": [
+        "'self' fonts.googleapis.com fonts.gstatic.com unpkg.com res.cloudinary.com",
+      ],
+      "style-src": ["'self' fonts.googleapis.com unpkg.com res.cloudinary.com"],
     },
   })
 );
