@@ -1,4 +1,10 @@
+<p align="center">
+ <img width="400px" src="https://res.cloudinary.com/ysnirix/image/upload/v1633700357/crypto_wbrawi.svg" align="center" alt="yCryptoLogo" />
+</p>
+
+\
 A Web Application for Crypting & Decrypting Messages using AES-256-CBC build using [NodeJS](https://nodejs.org) & [Express](https://expressjs.com) & [Vue.js](https://vuejs.org/) CDN
+
 
 [Live Preview](https://shortaurl.xyz/ycrypto)
 
